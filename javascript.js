@@ -263,9 +263,12 @@ function display() {
                     break;
                 case 'add':
                     firstNumber = displayText.textContent;
-
+                    
+                    
                     if (operator === '-') {
-                        firstNumber = '-' + displayText.textContent;
+                        if (displayText.textContent !== '-' && firstNumber[0] !== '-' && (isNaN(parseInt(result))))  {
+                            firstNumber = '-' + displayText.textContent;
+                        }
                     }
                     if (displayText.textContent === ''){
                         firstNumber = '0';
@@ -281,7 +284,9 @@ function display() {
                     case 'subtract':
                         firstNumber = displayText.textContent;
                         if (operator === '-') {
-                            firstNumber = '-' + displayText.textContent;
+                            if (displayText.textContent !== '-' && firstNumber[0] !== '-' && (isNaN(parseInt(result))))  {
+                                firstNumber = '-' + displayText.textContent;
+                            }
                         }
                         if (displayText.textContent === ''){
                             firstNumber = '0';
@@ -298,7 +303,9 @@ function display() {
                     firstNumber = displayText.textContent;
 
                     if (operator === '-') {
+                        if (displayText.textContent !== '-' && firstNumber[0] !== '-' && (isNaN(parseInt(result))))  {
                         firstNumber = '-' + displayText.textContent;
+                        }
                     }
                         if (displayText.textContent === ''){
                             firstNumber = '0';
@@ -313,10 +320,11 @@ function display() {
                     break;
                 case 'divide':
                         firstNumber = displayText.textContent;
-                        firstNumber = displayText.textContent;
 
                         if (operator === '-') {
-                            firstNumber = '-' + displayText.textContent;
+                            if (displayText.textContent !== '-' && firstNumber[0] !== '-' && (isNaN(parseInt(result))))  {
+                                firstNumber = '-' + displayText.textContent;
+                            }
                         }
                         if (displayText.textContent === ''){
                             firstNumber = '0';
@@ -338,6 +346,8 @@ function display() {
                         if (firstNumber !== result) {
                             secondNumber = displayText.textContent;
                         }
+                        console.log(firstNumber);
+                        console.log(secondNumber);
                         if (operator === '') {
                             firstNumber = displayText.textContent;
                             displayText.textContent = firstNumber;
@@ -373,4 +383,3 @@ function display() {
 
 
 document.addEventListener('DOMContentLoaded',display);
-
