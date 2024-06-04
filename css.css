@@ -1,0 +1,61 @@
+*{
+    border:2px black solid;
+
+    font-family:'RubikDoodleShadow-Regular','Poppins-Black','Kanit-Black',sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    background-color:beige;
+    justify-content:center;
+    align-items:center;
+}
+#Back{
+    display:flex;
+    height:380px;
+    width:278px;
+    border-radius:10px;
+    background-color:white;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:2px;
+
+
+
+
+}
+#displayScreen{
+    display:flex;
+    width:245px;
+    height:63px;
+    background-color:grey;
+    border-radius:10px;
+    margin-left:10px;
+    margin-top:10px;
+    color:white;
+    font-weight:bold;
+    font-size:32px;
+    text-shadow:3px 3px black;
+    letter-spacing:2px;
+    padding-right:8px;
+    align-items:center;
+    justify-content:flex-end;
+
+
+}
+#eight,#nine,#seven,#six,#five,#four,#three,#two,#one,#zero,#clear,#enter,#divide,#multiply,#subtract,#add{
+    width:63px;
+    height:60px;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:20px;
+    cursor:pointer;
+
+}
+#seven,#four,#one,#zero{
+    margin-left:10px;
+}
+
